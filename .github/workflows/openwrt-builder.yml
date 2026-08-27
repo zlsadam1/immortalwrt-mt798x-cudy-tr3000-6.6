@@ -17,6 +17,14 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
+  schedule:
+    - cron: 0 19 */5 * *
+
+permissions:
+  contents: write
+  packages: write
+  actions: write # 允许脚本去触发重试工作流
+
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
   REPO_BRANCH: openwrt-24.10-6.6
