@@ -64,6 +64,8 @@ on:
 
 permissions:
   contents: write
+  packages: write
+  actions: write # 允许脚本去触发重试工作流
 
 env:
   REPO_URL: ${{ inputs.repo_url }}
