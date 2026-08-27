@@ -62,6 +62,9 @@ on:
       repo_hash:
         value: ${{ jobs.build.outputs.repo_hash }}
 
+permissions:
+  contents: write
+
 env:
   REPO_URL: ${{ inputs.repo_url }}
   REPO_BRANCH: ${{ inputs.repo_branch }}
